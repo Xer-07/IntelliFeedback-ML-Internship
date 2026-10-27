@@ -36,16 +36,18 @@ Developed as part of the **YuvaIntern 5-Week Machine Learning Virtual Internship
   - Systematic 4-tier qualitative error analysis taxonomy (Sarcasm, Concessive Polarity, Negation, Neutral Ambiguity).
   - Experimental evaluator module (`src/experimental_framework.py`) & runner script (`run_week3_experiments.py`).
   - Formal Week 3 Report documentation (`Week3_Experimental_Design_and_Metric_Formulation_Report.docx`).
-- [x] **Week 4: Implementation Strategy & Code Architecture Outline** *(Current)*
+- [x] **Week 4: Implementation Strategy & Code Architecture Outline**
   - SOLID-compliant modular software architecture: `data_loader`, `preprocessor`, `trainer`, `inference_engine`.
   - Scikit-Learn custom `TextCleaner(BaseEstimator, TransformerMixin)` eliminating training-serving skew.
   - Automated unit testing suite (`tests/test_pipeline.py`) with 100% passing test assertion coverage.
   - Model pipeline persistence (`models/production_sentiment_pipeline.joblib`) and runner demo (`run_week4_pipeline.py`).
   - Formal Week 4 Report documentation (`Week4_Implementation_Strategy_and_Code_Architecture_Report.docx`).
-- [ ] **Week 5: Packaging, Interactive Web Application & Deployment**
-  - Interactive web interface development using **Streamlit**.
-  - Real-time single review scoring and bulk CSV inference mode.
-  - Final project report, demo video walkthrough, and completion submission.
+- [x] **Week 5: Deployment Planning, Ethical Considerations & Reflective Analysis** *(Final Capstone)*
+  - Cloud-native MLOps architecture (Docker, Kubernetes, Prometheus, Redis caching).
+  - Responsible AI governance: PII regex scrubbing, demographic fairness (Equalized Odds), and explainable triage.
+  - Interactive production web dashboard (`app.py`) built with **Streamlit** (Live review scoring & batch CSV processing).
+  - Production containerization (`Dockerfile`) and 5-week retrospective analysis.
+  - Formal Week 5 Report documentation (`Week5_Deployment_Planning_Ethical_Considerations_and_Reflective_Analysis.docx`).
 
 ---
 
@@ -132,11 +134,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Build or Re-generate Week 1 Deliverable Report
+### 4. Launch Interactive Web Application (Streamlit)
 ```bash
-python generate_week1_doc.py
+streamlit run app.py
 ```
-The output file will be generated in `docs/Week1_Project_Planning_and_Strategy_Report.docx`.
+Access the live interface at `http://localhost:8501`.
+
+### 5. Run via Docker Container
+```bash
+docker build -t intellifeedback-app .
+docker run -p 8501:8501 intellifeedback-app
+```
 
 ---
 
