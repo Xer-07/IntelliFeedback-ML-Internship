@@ -30,17 +30,18 @@ Developed as part of the **YuvaIntern 5-Week Machine Learning Virtual Internship
   - Dual-tier system architecture: sub-linear TF-IDF + Calibrated LinearSVC (<15ms) with DistilBERT contextual fallback.
   - Baseline model pipeline implementation (`src/model_pipeline.py`) & interactive demo (`run_week2_benchmarks.py`).
   - Formal Week 2 Report documentation (`Week2_Algorithm_Exploration_and_Model_Design_Report.docx`).
-- [x] **Week 3: Experimental Design & Evaluation Metric Formulation** *(Current)*
+- [x] **Week 3: Experimental Design & Evaluation Metric Formulation**
   - Metric formulation addressing asymmetric churn cost: Macro F1 ($\ge 0.88$), Negative Recall ($\ge 0.90$), Balanced Accuracy ($\ge 0.85$).
   - Leakage-free experimental protocol: Golden Blind Test Set (15%) + Stratified 5-Fold Cross-Validation.
   - Systematic 4-tier qualitative error analysis taxonomy (Sarcasm, Concessive Polarity, Negation, Neutral Ambiguity).
   - Experimental evaluator module (`src/experimental_framework.py`) & runner script (`run_week3_experiments.py`).
   - Formal Week 3 Report documentation (`Week3_Experimental_Design_and_Metric_Formulation_Report.docx`).
-- [ ] **Week 4: Model Tuning, Deep Learning & Optimization**
-  - Grid search hyperparameter tuning for linear and ensemble models.
-  - Contextual deep learning exploration using fine-tuned **DistilBERT**.
-  - Error analysis on edge cases, sarcasm, and ambiguous sentiment.
-  - Model serialization into production artifacts (`.joblib` / `.pt`).
+- [x] **Week 4: Implementation Strategy & Code Architecture Outline** *(Current)*
+  - SOLID-compliant modular software architecture: `data_loader`, `preprocessor`, `trainer`, `inference_engine`.
+  - Scikit-Learn custom `TextCleaner(BaseEstimator, TransformerMixin)` eliminating training-serving skew.
+  - Automated unit testing suite (`tests/test_pipeline.py`) with 100% passing test assertion coverage.
+  - Model pipeline persistence (`models/production_sentiment_pipeline.joblib`) and runner demo (`run_week4_pipeline.py`).
+  - Formal Week 4 Report documentation (`Week4_Implementation_Strategy_and_Code_Architecture_Report.docx`).
 - [ ] **Week 5: Packaging, Interactive Web Application & Deployment**
   - Interactive web interface development using **Streamlit**.
   - Real-time single review scoring and bulk CSV inference mode.
