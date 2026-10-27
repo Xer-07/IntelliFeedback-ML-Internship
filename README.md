@@ -24,17 +24,19 @@ Developed as part of the **YuvaIntern 5-Week Machine Learning Virtual Internship
   - Empirical literature review and architectural design.
   - 5-week milestone roadmap and risk management plan.
   - Formal Project Charter documentation (`Week1_Project_Planning_and_Strategy_Report.docx`).
-- [x] **Week 2: Algorithm Exploration & Preliminary Model Design** *(Current)*
+- [x] **Week 2: Algorithm Exploration & Preliminary Model Design**
   - Theoretical & empirical review of MNB, Logistic Regression, LinearSVC, Tree Ensembles, and DistilBERT.
   - Comprehensive 7-dimension algorithm comparison matrix.
   - Dual-tier system architecture: sub-linear TF-IDF + Calibrated LinearSVC (<15ms) with DistilBERT contextual fallback.
   - Baseline model pipeline implementation (`src/model_pipeline.py`) & interactive demo (`run_week2_benchmarks.py`).
   - Formal Week 2 Report documentation (`Week2_Algorithm_Exploration_and_Model_Design_Report.docx`).
-- [ ] **Week 3: Feature Engineering & Baseline Modeling**
-  - Sublinear TF-IDF n-gram vectorization.
-  - Baseline classifiers: Multinomial Naive Bayes, Logistic Regression, LinearSVC.
-  - Initial evaluation benchmarks and cross-validation score reporting.
-- [ ] **Week 4: Hyperparameter Optimization, Deep Learning & Calibration**
+- [x] **Week 3: Experimental Design & Evaluation Metric Formulation** *(Current)*
+  - Metric formulation addressing asymmetric churn cost: Macro F1 ($\ge 0.88$), Negative Recall ($\ge 0.90$), Balanced Accuracy ($\ge 0.85$).
+  - Leakage-free experimental protocol: Golden Blind Test Set (15%) + Stratified 5-Fold Cross-Validation.
+  - Systematic 4-tier qualitative error analysis taxonomy (Sarcasm, Concessive Polarity, Negation, Neutral Ambiguity).
+  - Experimental evaluator module (`src/experimental_framework.py`) & runner script (`run_week3_experiments.py`).
+  - Formal Week 3 Report documentation (`Week3_Experimental_Design_and_Metric_Formulation_Report.docx`).
+- [ ] **Week 4: Model Tuning, Deep Learning & Optimization**
   - Grid search hyperparameter tuning for linear and ensemble models.
   - Contextual deep learning exploration using fine-tuned **DistilBERT**.
   - Error analysis on edge cases, sarcasm, and ambiguous sentiment.
