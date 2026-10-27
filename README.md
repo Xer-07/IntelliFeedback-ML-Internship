@@ -19,15 +19,17 @@ Developed as part of the **YuvaIntern 5-Week Machine Learning Virtual Internship
 
 ## 🗓️ 5-Week Internship Roadmap
 
-- [x] **Week 1: Project Planning & Strategy Development** *(Current)*
+- [x] **Week 1: Project Planning & Strategy Development**
   - Problem definition, business impact, and hypothesis formulation.
   - Empirical literature review and architectural design.
   - 5-week milestone roadmap and risk management plan.
   - Formal Project Charter documentation (`Week1_Project_Planning_and_Strategy_Report.docx`).
-- [ ] **Week 2: Data Collection, Ingestion & Exploratory Data Analysis (EDA)**
-  - Dataset acquisition (Amazon/Yelp consumer reviews benchmark).
-  - Class distribution profiling, n-gram analysis, and vocabulary auditing.
-  - Text normalization pipeline (stopword tuning, negation preservation, lemmatization).
+- [x] **Week 2: Algorithm Exploration & Preliminary Model Design** *(Current)*
+  - Theoretical & empirical review of MNB, Logistic Regression, LinearSVC, Tree Ensembles, and DistilBERT.
+  - Comprehensive 7-dimension algorithm comparison matrix.
+  - Dual-tier system architecture: sub-linear TF-IDF + Calibrated LinearSVC (<15ms) with DistilBERT contextual fallback.
+  - Baseline model pipeline implementation (`src/model_pipeline.py`) & interactive demo (`run_week2_benchmarks.py`).
+  - Formal Week 2 Report documentation (`Week2_Algorithm_Exploration_and_Model_Design_Report.docx`).
 - [ ] **Week 3: Feature Engineering & Baseline Modeling**
   - Sublinear TF-IDF n-gram vectorization.
   - Baseline classifiers: Multinomial Naive Bayes, Logistic Regression, LinearSVC.
